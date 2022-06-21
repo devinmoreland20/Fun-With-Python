@@ -21,5 +21,3 @@ list_length = len(services)
 length = "Length = "
 print(services)
 print(length, list_length) 
-
-
