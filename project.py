@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.9
-def instances():   #this creates our function
+def instances():   #this creates our function :panda_face:
     ec2 = int(input("How many EC2 instance do you want: "))  #varible for how many instances we want
     dept = str(input("What department do you work in? "))#Variable for which dept we work in
     dept = dept.lower()   #Lowercases all input for dept so that case errors do not effect it
