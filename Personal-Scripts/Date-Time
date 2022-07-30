@@ -1,0 +1,22 @@
+#This was created to send the time of container creation to a file within the container
+
+#!/usr/bin/env python3.9
+
+from datetime import date
+import time
+import sys
+import boto3
+s3 = boto3.client('s3')
+
+today = date.today()
+time = (time.strftime("%I:%M:%S"))
+
+def apples():
+    sys.stdout = open('Creation', 'w')
+    print("Container was Assimilated at ", today, "at", time)
+    sys.stdout.close()
+
+
+with open('Creation', 'rb') as data:
+    s3.upload_fileobj(data, 'devin02231993', 'Creation')
+# prints None
